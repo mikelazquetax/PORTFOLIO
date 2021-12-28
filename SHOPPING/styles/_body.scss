@@ -1,0 +1,109 @@
+
+.main{
+    display: inline-flex;
+    padding-inline: 6%;
+    @include mobile{
+        flex-direction: column;
+    }
+.main-pic{
+    img{
+    width: 40%;
+    height: 80%;
+    @include mobile{
+        width: 80%;
+        height: 80%;
+        margin-left: 12%;
+    }
+    border-radius: 10%;
+    margin-top: 5%;
+    margin-left: 28%;
+}
+
+
+}
+
+.imgCarr{
+    display: inline-flex;
+    margin-top: 5%;
+    width: 10%;
+    height: 10%;
+}
+
+
+
+.main-texto{
+ width: 40%;
+ margin-right: 15%;
+ @include mobile{
+       text-align: center;
+       margin-left: 23%;
+       width: 60%;
+}
+ h3{
+    
+     color:orange;
+     font-family: Barlow, sans-serif;
+ }
+ h2{
+    font-family: Barlow, sans-serif;
+    font-size: xx-large;
+ }
+ p{
+     font-size: large;
+     font-family: Barlow, sans-serif;
+ }
+ .prices{
+
+     display: inline-flex;
+    p{
+        padding-inline: 15%;
+
+    }
+    .discount{
+        color: orange;
+        background-color: lightgrey;
+    }
+ }
+ .buy{
+     display: flex;
+     height: 10%;
+     padding-inline: 2%;
+     @include mobile{
+         width: 120%;
+     }
+     .addToCart{
+         @include mobile{
+             width: 150%;
+             height: 120%;
+             
+         }
+        background-color: orange;
+        color: white;
+        margin-left: 10%;
+        border-radius: 10%;
+        
+    }
+    .adding{
+        @include mobile{
+            width: 20%;
+            height: 150%;    
+        }
+        color: orange;
+        border-radius: 10%;
+       width: 10%;
+    }
+    .adding-total{
+        @include mobile{
+           
+        }
+        display: flex;
+        padding-inline: 7%;
+      
+       
+    }
+    
+ }
+
+}
+
+}

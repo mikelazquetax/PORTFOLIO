@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sneakers</title>
+    <script src="shopping.js"></script>
+    <link rel="stylesheet" type="text/css" href="./styles/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+  </head>
+  <body>
+    <header>
+      <h3>Sneakers</h3>
+      <nav>
+        <div id="myLinks" class="myLinks">
+        <a href="#"><b>Collections</b></a>
+        <a href="#"><b>Men</b></a>
+        <a href="#"><b>Women</b></a>
+        <a href="#"><b>About</b></a>
+        <a href="#"><b>Contact</b></a>
+      </div>
+        <a  class="icon" onclick="myFunction()" >
+          <i class="fa fa-bars"></i>
+          </a>
+      </nav>
+      <img class="cart" src="./icon-cart.svg" alt="cart" />
+      <img class="avatar" src="./image-avatar.png" alt="avatar" />
+    </header>
+    <div class="main">
+      <div   class="main-pic">
+        <img id= "main-pic" src="./image-product-1.jpg" alt="imag1" />
+  
+      </div>
+
+      <div class="main-texto">
+        <h3>SNEAKER COMPANY</h3>
+        <h2>Fall Limited Edition Sneakers</h2>
+        <p>
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole. They'll withstand everything
+          the weather can offer.
+        </p>
+        <div class="prices">
+          <p><b>$125.00</b></p>
+          <p class="discount"><b>50%</b></p>
+        </div>
+        <div class="buy">
+            <button id="substract" class="adding"><b>-</b></button>
+            <h4 id="contadorUnidades" class="adding-total">0</h4>
+            <button id="adding" class="adding"><b>+</b></button>
+            <button  class="addToCart"><img src="./icon-cart.svg"  alt="cart" />Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="carrousel">
+        <img id="img1"  src="./image-product-1.jpg" alt="img1">
+        <img id="img2" src="./image-product-2.jpg" alt="img2">
+        <img id="img3" src="./image-product-3.jpg" alt="img3">
+        <img id="img4" src="./image-product-4.jpg" alt="img4">
+    </div>
+
+  </body>
+</html>
