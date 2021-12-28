@@ -1,0 +1,127 @@
+:root{
+    --primary-color: rgba(9, 100, 128, 0.6);}
+
+    *{
+        box-sizing: border-box;
+        margin: 0;
+     
+    }
+
+h1{
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    color:white;
+    height: 100vh;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    
+  
+  
+}
+
+.container:before{
+    display: flex;
+    flex-direction: column;
+    content: '';
+    background: url(./pamplona.jpg) no-repeat center
+    center/cover ; 
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left:0;
+    z-index: -1;
+ 
+    
+
+}
+
+.personalData{
+    padding-bottom: 10px;
+}
+
+.personalData:hover{
+    color:gold;
+    font-size: 25px
+}
+
+.academics{
+    padding-bottom: 10px;
+}
+.academics:hover{
+    color:gold;
+    font-size: 25px
+}
+
+.workExperience{
+    padding-bottom: 10px;
+}
+.workExperience:hover{
+    color:gold;
+    font-size: 25px
+}
+
+.others{
+    padding-bottom: 10px;
+}
+
+.others:hover{
+    color:gold;
+    font-size: 25px
+}
+
+.modal{
+    position: fixed;
+    top:60%;
+    left:50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: 200ms ease-in-out;
+    border: 4px solid black;
+    border-radius: 10%;
+    z-index: 10;
+    background-color: rgba(9, 100, 128,1 );
+    width: 500px;
+    max-width: 80%;
+}
+
+.modal.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header{
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    color: white;
+}
+.modal-header .title{
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-header .close-button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-body{
+    padding: 10px 15px;
+    color: white;
+}
