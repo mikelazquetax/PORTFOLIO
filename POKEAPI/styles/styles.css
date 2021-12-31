@@ -221,6 +221,14 @@ body {
   }
 }
 
+@media (max-width: 770px) {
+  .mainContainer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .mainContainer .card_pkm {
   font-weight: bold;
   margin: 10px;
@@ -236,6 +244,12 @@ body {
   text-align: center;
   font-family: 'Times New Roman', Times, serif;
   font-size: 18;
+}
+
+@media (max-width: 390px) {
+  .mainContainer .card_pkm {
+    width: 100%;
+  }
 }
 
 .mainContainer .card_pkm:hover {

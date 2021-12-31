@@ -15,7 +15,9 @@ body{
     @include mobile{
         padding: 0%;
     }
-
+    @include ipad{
+        justify-content: center;
+    }
     
 .card_pkm{
 
@@ -35,6 +37,10 @@ body{
 
     color: white;
     width: 25%;
+    @include mobile{
+        width: 100%;
+    }
+ 
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
     font-size: 18;
