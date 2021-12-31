@@ -5,27 +5,24 @@ h1 {
 
 @media (max-width: 390px) {
   h1 {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     padding-inline: 3%;
-    text-align: center;
   }
 }
 
 @media (max-width: 770px) {
   h1 {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     padding-inline: 5%;
-    text-align: center;
   }
 }
 
 h1 .selector {
   text-align: center;
-  margin-left: 40%;
   padding: 1px;
   background-color: #f0f080;
   font-weight: bold;
@@ -33,7 +30,7 @@ h1 .selector {
 
 @media (max-width: 390px) {
   h1 .selector {
-    margin-left: 10%;
+    width: 29%;
   }
 }
 
@@ -58,7 +55,7 @@ h1 .btonBuscar {
 
 @media (max-width: 390px) {
   h1 .btonBuscar {
-    width: 30%;
+    width: 10%;
     margin-left: 3%;
     padding: 3px;
     margin-top: 1%;
@@ -67,7 +64,7 @@ h1 .btonBuscar {
 
 @media (max-width: 770px) {
   h1 .btonBuscar {
-    width: 40%;
+    width: 20%;
   }
 }
 
@@ -186,6 +183,18 @@ h1 .toggle input:checked + .toggle-control {
 
 h1 .toggle input:checked + .toggle-control:after {
   left: 25px;
+}
+
+@media (max-width: 770px) {
+  h1 .inputText {
+    width: 20%;
+  }
+}
+
+@media (max-width: 390px) {
+  h1 .inputText {
+    width: 30%;
+  }
 }
 
 body {

@@ -13,7 +13,26 @@ window.onload = () => {
 
   bodyDoc.style.backgroundColor = 'black'
 
+  let inputText = document.querySelector('input')
 
+  inputText.addEventListener('keyup', (e)=>{
+   valorCampo = e.target.value
+    const pokeFiltrado = globalVariable.filter((item)=>{
+    return  item.name.includes(valorCampo)
+    })
+    let mainDivCont = document.getElementById('container')
+    let dropDownTypes = document.getElementById('tiposPokemon')
+    dropDownTypes.value = 'showMeAll'
+    let AllDivs = document.getElementsByClassName("card_pkm")
+    let ArrDivs = []
+    ArrDivs = [...AllDivs]
+    ArrDivs.forEach((item)=>{
+      mainDivCont.removeChild(item)
+      
+    })
+    mainDivCont.remove()
+    FilterInDom(pokeFiltrado)
+  })
   let printToDom = (data) => {
     id = id + 1;
  /*    let divContainer = document.getElementById("container"); */
@@ -128,6 +147,10 @@ clasesPokemon = (tipologia, id) => {
       normal = document.getElementById(id + 'p');
       normal.style.borderColor = "lightsalmon";
       break;
+      case "flying":
+        normal = document.getElementById(id + 'p');
+        normal.style.borderColor = "lightsalmon";
+        break;
     case "poison":
       veneno = document.getElementById(id + 'p');
       veneno.style.borderColor = "purple";
@@ -229,17 +252,29 @@ function filtrar(){
   if(valorFiltrado == 'showMeAll'){
    window.location.reload()
   }else{
-  let tiposSeleccionados = []
+
+
+let tiposSeleccionados = []
+
+
+
+
   for(value of globalVariable){
+    try{
+    if (value.types[0].type.name == valorFiltrado || value.types[1].type.name == valorFiltrado){
+      tiposSeleccionados.push(value)
+    }
+  }catch{
     if (value.types[0].type.name == valorFiltrado){
       tiposSeleccionados.push(value)
     }
   }
+  }
   console.log(tiposSeleccionados)
   let divContainer = document.getElementById('container')
   divContainer.remove()
-  FilterInDom(tiposSeleccionados);
-}
+  FilterInDom(tiposSeleccionados); 
+} 
 }
 
 
