@@ -1,0 +1,283 @@
+@charset "UTF-8";
+/**maxwidth es eso o menos**/
+header {
+  text-align: center;
+}
+
+header .score {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  padding: 2%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 770px) {
+  header .score {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 390px) {
+  header .score {
+    font-size: 20px;
+  }
+}
+
+header .score h1 {
+  text-align: center;
+}
+
+header .score p {
+  margin-left: 5%;
+}
+
+header .moves {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding-inline: 4%;
+}
+
+@media (max-width: 770px) {
+  header .moves p {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 390px) {
+  header .moves p {
+    font-size: 20px;
+  }
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  /**Ponemos display grid para hacer la página con este formato**/
+  height: 150%;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  /**Con esto asignamos valores de tamaño a cada una de las columnas que quiero crear
+    con auto auto auto creamos tres columnas de igual tamaño calculadas por el navegador
+    con 30px auto 50px le damos anchura fija a la primera y tercera y la segunda se ajusta automaticamente**/
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 10%;
+  /*    margin-top: 5%; */
+}
+
+@media (max-width: 390px) {
+  .grid-container {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    grid-gap: 2%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 770px) {
+  .grid-container {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    grid-gap: 2%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.grid-container > div {
+  cursor: pointer;
+  padding: 4%;
+  margin-top: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 390px) {
+  .grid-container > div {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 2%;
+  }
+}
+
+@media (max-width: 770px) {
+  .grid-container > div {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 2%;
+  }
+}
+
+.grid-container > div:hover {
+  opacity: 0.3;
+}
+
+.grid-container .tubo {
+  height: 45%;
+  width: 45%;
+  margin-top: 25%;
+}
+
+.grid-container .tubo .panel1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  text-align: center;
+  color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.grid-container .tubo .panel2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  text-align: center;
+  color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.grid-container .tubo .panel3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  text-align: center;
+  color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.grid-container .tubo .panel4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  text-align: center;
+  color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.grid-container .tubo .panel5 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  text-align: center;
+  color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.grid-container .tubo .panel6 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  text-align: center;
+  color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.mario {
+  position: absolute;
+  padding-bottom: 9%;
+  margin-left: 1%;
+  height: 9%;
+  width: 5%;
+}
+
+@media (max-width: 770px) {
+  .mario {
+    position: absolute;
+    padding-bottom: 9%;
+    margin-left: 1%;
+    height: 5.5%;
+    width: 10%;
+  }
+}
+
+@media (max-width: 390px) {
+  .mario {
+    position: absolute;
+    padding-bottom: 9%;
+    margin-left: 1%;
+    height: 6%;
+    width: 10%;
+  }
+}
+
+body {
+  background: url("../clouds.png") repeat 0 0;
+  -webkit-animation: animate 15s infinite;
+          animation: animate 15s infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes animate {
+  100% {
+    background-position: 1200px 1200px;
+  }
+}
+
+@keyframes animate {
+  100% {
+    background-position: 1200px 1200px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

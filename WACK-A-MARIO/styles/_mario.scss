@@ -1,0 +1,23 @@
+.mario{
+    position: absolute;
+    padding-bottom: 9%;
+    margin-left: 1%;
+    height: 9%;
+    width: 5%;
+
+    @include ipad{
+        position: absolute;
+        padding-bottom: 9%;
+        margin-left: 1%;
+        height: 5.5%;
+        width: 10%;
+    }
+    @include mobile{
+        position: absolute;
+        padding-bottom: 9%;
+        margin-left: 1%;
+        height: 6%;
+        width: 10%;
+    }
+    
+}

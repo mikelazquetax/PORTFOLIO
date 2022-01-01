@@ -1,0 +1,47 @@
+
+header{
+    text-align: center;
+
+
+
+.score{
+    display: inline-flex;
+    align-items: baseline;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    @include ipad{
+        font-size: 40px;
+    }
+    @include mobile{
+        font-size: 20px;
+    }
+    padding: 2%;
+    justify-content: center ;
+
+    h1{
+        text-align: center;
+    }
+    p{
+        margin-left: 5%;
+
+        
+    }
+}
+
+
+
+
+.moves{
+    display: inline-flex;
+    padding-inline: 4%;
+    p{
+        @include ipad{
+            font-size: 40px;
+        }
+        @include mobile{
+            font-size: 20px;
+        }
+    }
+}
+
+}

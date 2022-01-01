@@ -1,0 +1,119 @@
+.grid-container {
+    display: grid; /**Ponemos display grid para hacer la página con este formato**/
+    height: 150%;
+    grid-template-columns: auto auto auto; /**Con esto asignamos valores de tamaño a cada una de las columnas que quiero crear
+    con auto auto auto creamos tres columnas de igual tamaño calculadas por el navegador
+    con 30px auto 50px le damos anchura fija a la primera y tercera y la segunda se ajusta automaticamente**/
+    @include mobile{
+        grid-template-columns: auto auto;
+        grid-gap: 2%;
+        justify-content: center;
+        align-items: center;
+    }
+    @include ipad{
+        grid-template-columns: auto auto;
+        grid-gap: 2%;
+        justify-content: center;
+        align-items: center;
+    }
+ justify-content: center;
+ align-items: center;
+    grid-gap: 10%;
+ /*    margin-top: 5%; */
+   
+ 
+
+  > div{
+
+    cursor: pointer;
+    padding: 4%;
+    margin-top: 15%;
+    display: flex;
+    @include mobile{
+        justify-content: center;
+        margin-top:2%
+    }
+    @include ipad{
+        justify-content: center;
+        margin-top:2%
+    }
+
+    &:hover{
+        opacity: 0.3;
+
+    }
+
+}
+
+
+
+
+.tubo{
+   height: 45%;
+   width: 45%;
+   margin-top:25%;
+
+   .panel1 {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;  
+    color: white;
+    width: fit-content;
+
+  }
+
+  .panel2 {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;  
+    color: white;
+    width: fit-content;
+
+  }
+
+  .panel3 {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;  
+    color: white;
+    width: fit-content;
+
+  }
+
+
+  .panel4 {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;  
+    color: white;
+    width: fit-content;
+  }
+
+  .panel5 {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;  
+    color: white;
+    width: fit-content;
+
+  }
+
+  .panel6 {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;  
+    color: white;
+    width: fit-content;
+
+ 
+
+  }
+
+  
+
+}
+
+
+
+}
+
