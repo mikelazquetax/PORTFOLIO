@@ -142,5 +142,12 @@
   border: 10px solid;
   border-color: transparent var(--fill) var(--fill) var(--fill);
   border-radius: 50%;
-  transform: rotate( calc(1deg * (-45 + var(--percentage) * 1.9)))
+  transform: rotate( calc(1deg * (-45 + var(--percentage) * 1.9)));
+  animation: mypie 1s ease-in;
+}
+
+@keyframes mypie{
+  0%{transform: translateX( 0%)}
+ 
+  50%{transform: translateX(100%)}
 }
