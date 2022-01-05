@@ -1,166 +1,171 @@
-.botonera{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   background-color: transparent;
+.botonera {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
 
-&.active{
+  &.active {
     opacity: 0.2;
     pointer-events: none;
-}
+  }
 
-.selector{
+  .selector {
     padding: 1%;
     margin-left: 1%;
     border-color: crimson;
     border-width: medium;
     font-weight: bold;
-    @include ipad{
-        font-size: 20px;
+    @include ipad {
+      font-size: 20px;
     }
-    @include mobile{
-        font-size: 12px;
+    @include mobile {
+      font-size: 12px;
     }
+  }
 
-}
-
-button{
+  button {
     margin-left: 2%;
     display: hidden;
     padding: 1%;
-    border-color:crimson;
-    background-color:white;
+    border-color: crimson;
+    background-color: white;
     font-weight: bold;
-    @include ipad{
-        font-size: 20px;
+    @include ipad {
+      font-size: 20px;
     }
-    @include mobile{
-        font-size: 12px;
+    @include mobile {
+      font-size: 12px;
     }
-    
-    &:hover{
-        background-color: green;
-        
-    }
-}
-  
 
+    &:hover {
+      background-color: orange;
+    }
+  }
 }
 
-  
-  .modal{
-      position: fixed;
-      top:40%;
-      left:50%;
-      transform: translate(-50%, -50%) scale(1);
-      transition: 200ms ease-in-out;
-      border: 4px solid rgb(197, 48, 48);
-   
-      z-index: 10;
-      background-color: rgba(9, 100, 128,1 );
-      width: 500px;
-      max-width: 80%;
-      overflow-y: scroll; 
-      overflow-x: hidden;
-      height:400px;
-      color: white;
-      font-weight: bold;
-      p{
-        border: double;
-        padding: 2%;
-        margin:0;
-        text-align: center;
-        &:hover{
-            background-color: gold;
-            color: black;
-            transition: transform .2s;
-            transform: scale(1.2);
-        }
+.modal {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: 200ms ease-in-out;
+  border: 4px solid rgb(197, 48, 48);
+
+  z-index: 10;
+  background-color: black;
+  width: 500px;
+  max-width: 80%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 400px;
+  color: white;
+  font-weight: bold;
+  p {
+    border: double;
+    padding: 2%;
+    margin: 0;
+    text-align: center;
+    &:hover {
+      background-color: orange;
+      color: black;
+      transition: transform 0.2s;
+      transform: scale(1.2);
     }
+  }
+}
 
+.modalRating {
+  /*       display: flex;
+      flex-direction: row; */
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  top: 20%;
+  left: 5%;
+  transform: (-50%, -50%) scale(1);
+  transition: all 200ms ease-in-out;
+  animation: drop 0.7s ease forwards;
+  border: 4px solid white;
+  z-index: 10;
+  background-color: whitesmoke;
+  width: 700px;
+  max-width: 80%;
+  height: 400px;
+  color: black;
+  font-weight: bold;
 
+  @keyframes drop {
+    100% {
+      transform: translateX(45%);
+    }
+  }
+  @include mobile {
+    @keyframes drop {
+      100% {
+        transform: translateY(10%);
+      }
+    }
   }
 
-  .modalRating{
-/*       display: flex;
-      flex-direction: row; */
-      align-items: center;
-      justify-content: center;
-      position:fixed;
-      overflow-y: scroll; 
-      overflow-x: hidden;
-      top: 20%;
-      left: 5%;
-      transform: (-50%, -50%) scale(1);
-      transition: 200ms ease-in-out;
-      border: 4px solid white;
-      z-index: 10;
-      background-color: whitesmoke;
-      width: 700px;
-      max-width: 80%;
-      height: 400px;
-      color: black;
-      font-weight: bold;
-      p{
-          text-align: center;
-      }
-      .pie{
-          margin-top: 10%;
-          margin-left: 7%;
-          display: inline-flex;
-          width: 100px;
-          height: 50px;
-          color: black;
-          position: relative;
-          font-size: 15px;
-         /*  display: flex; */
-         /*  margin: 10px; */
-          align-items: flex-end;
-          justify-content: center;
-          box-sizing: border-box;
-        overflow: hidden;  
-     
-        --percentage: 0;
-         --fill: #00f;
+  p {
+    text-align: center;
+  }
+  .pie {
+    margin-top: 10%;
+    margin-left: 7%;
+    display: inline-flex;
+    width: 100px;
+    height: 50px;
+    color: black;
+    position: relative;
+    font-size: 15px;
+    /*  display: flex; */
+    /*  margin: 10px; */
+    align-items: flex-end;
+    justify-content: center;
+    box-sizing: border-box;
+    overflow: hidden;
 
-          &:after{
-            content: '';
-            box-sizing: border-box;
-            position: absolute;
-            left: 0;
-            top:0;
-            width: 100px;
-            height: 100px;
-            border: 10px solid;
-            border-color: #000 #000 var(--fill) var(--fill);
-            border-radius: 50%;
-            transform: rotate( calc(1deg *(-45 + var(--percentage) * 1.8 )));
+    --percentage: 0;
+    --fill: #00f;
 
-          }
-      }
-
-
+    &:after {
+      content: "";
+      box-sizing: border-box;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100px;
+      height: 100px;
+      border: 10px solid;
+      border-color: #000 #000 var(--fill) var(--fill);
+      border-radius: 50%;
+      transform: rotate(calc(1deg * (-45 + var(--percentage) * 1.8)));
+    }
+  }
+  &:hover{
     
+    background: linear-gradient(orange 20%, white 30%);
  
   }
 
-
-  .modal-header{
-    padding: 10px 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid black;
-    color: black;
-    .title{
-        font-size: 1.25rem;
-        font-weight: bold;
-    }
-    .closeB{
-        border-radius: 50%;
-        font-weight: bold;
-    }
-      
 }
 
-
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+  color: black;
+  .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  .closeB {
+    border-radius: 50%;
+    font-weight: bold;
+  }
+}

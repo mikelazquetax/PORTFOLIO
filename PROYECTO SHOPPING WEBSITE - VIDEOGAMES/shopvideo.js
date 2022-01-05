@@ -304,7 +304,7 @@ modalWithRatings = () => {
       
       var modalForRatings = document.getElementById('mRatings')
       modalForRatings.appendChild(isAMust)
-      if(exceptionalValuation > 50){
+      if(exceptionalValuation > 60){
         this.#isMustBuy = 'Is it a Must Buy? : Yes'
         isAMust.innerText =  this.#isMustBuy
       }else{

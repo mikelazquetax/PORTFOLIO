@@ -59,7 +59,7 @@
 }
 
 .botonera button:hover {
-  background-color: green;
+  background-color: orange;
 }
 
 .modal {
@@ -72,7 +72,7 @@
   transition: 200ms ease-in-out;
   border: 4px solid #c53030;
   z-index: 10;
-  background-color: #096480;
+  background-color: black;
   width: 500px;
   max-width: 80%;
   overflow-y: scroll;
@@ -90,12 +90,12 @@
 }
 
 .modal p:hover {
-  background-color: gold;
+  background-color: orange;
   color: black;
-  -webkit-transition: -webkit-transform .2s;
-  transition: -webkit-transform .2s;
-  transition: transform .2s;
-  transition: transform .2s, -webkit-transform .2s;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
@@ -116,8 +116,10 @@
   left: 5%;
   -webkit-transform: -50%, -50% scale(1);
           transform: -50%, -50% scale(1);
-  -webkit-transition: 200ms ease-in-out;
-  transition: 200ms ease-in-out;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-animation: drop 0.7s ease forwards;
+          animation: drop 0.7s ease forwards;
   border: 4px solid white;
   z-index: 10;
   background-color: whitesmoke;
@@ -126,6 +128,35 @@
   height: 400px;
   color: black;
   font-weight: bold;
+}
+
+@-webkit-keyframes drop {
+  100% {
+    -webkit-transform: translateX(45%);
+            transform: translateX(45%);
+  }
+}
+
+@keyframes drop {
+  100% {
+    -webkit-transform: translateX(45%);
+            transform: translateX(45%);
+  }
+}
+
+@media (max-width: 390px) {
+  @-webkit-keyframes drop {
+    100% {
+      -webkit-transform: translateY(10%);
+              transform: translateY(10%);
+    }
+  }
+  @keyframes drop {
+    100% {
+      -webkit-transform: translateY(10%);
+              transform: translateY(10%);
+    }
+  }
 }
 
 .modalRating p {
@@ -159,7 +190,7 @@
 }
 
 .modalRating .pie:after {
-  content: '';
+  content: "";
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: absolute;
@@ -170,8 +201,13 @@
   border: 10px solid;
   border-color: #000 #000 var(--fill) var(--fill);
   border-radius: 50%;
-  -webkit-transform: rotate(calc(1deg *(-45 + var(--percentage) * 1.8 )));
-          transform: rotate(calc(1deg *(-45 + var(--percentage) * 1.8 )));
+  -webkit-transform: rotate(calc(1deg * (-45 + var(--percentage) * 1.8)));
+          transform: rotate(calc(1deg * (-45 + var(--percentage) * 1.8)));
+}
+
+.modalRating:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, orange), color-stop(30%, white));
+  background: linear-gradient(orange 20%, white 30%);
 }
 
 .modal-header {
@@ -199,14 +235,17 @@
   font-weight: bold;
 }
 
-body {
-  background: url("../background.png") no-repeat center/cover;
+.article1 {
+  /*     background: url('../background.jpg'); */
+  height: 100%;
+  width: 100%;
+  /* no-repeat center/cover */
   color: white;
 }
 
-body:before {
+.article1:before {
   content: '';
-  background: url("../background.png") no-repeat center center/cover;
+  background: url("../background.jpg") no-repeat center center/cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -257,12 +296,66 @@ body:before {
 }
 
 .mainContainer .ratings {
-  border: double;
-  border-color: crimson;
-  background-color: #3e4447;
+  -webkit-box-shadow: #b47380;
+          box-shadow: #b47380;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, orange), color-stop(40%, black));
+  background: linear-gradient(orange 20%, black 40%);
   height: 300px;
   padding: 1.5%;
   text-align: center;
+}
+
+.mainContainer .ratings:hover {
+  -webkit-transition: background-color 10s;
+  transition: background-color 10s;
+  -webkit-animation: rgbanim 1s forwards;
+          animation: rgbanim 1s forwards;
+}
+
+@-webkit-keyframes rgbanim {
+  0% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, orange), color-stop(40%, black));
+    background: linear-gradient(orange 20%, black 40%);
+  }
+  10% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, orange), color-stop(40%, black));
+    background: linear-gradient(orange 25%, black 40%);
+  }
+  15% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, orange), color-stop(40%, black));
+    background: linear-gradient(orange 30%, black 40%);
+  }
+  20% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(35%, orange), color-stop(40%, black));
+    background: linear-gradient(orange 35%, black 40%);
+  }
+  30% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(45%, orange), color-stop(55%, black));
+    background: linear-gradient(orange 45%, black 55%);
+  }
+}
+
+@keyframes rgbanim {
+  0% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, orange), color-stop(40%, black));
+    background: linear-gradient(orange 20%, black 40%);
+  }
+  10% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, orange), color-stop(40%, black));
+    background: linear-gradient(orange 25%, black 40%);
+  }
+  15% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, orange), color-stop(40%, black));
+    background: linear-gradient(orange 30%, black 40%);
+  }
+  20% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(35%, orange), color-stop(40%, black));
+    background: linear-gradient(orange 35%, black 40%);
+  }
+  30% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(45%, orange), color-stop(55%, black));
+    background: linear-gradient(orange 45%, black 55%);
+  }
 }
 
 .mainContainer .ratings button {
@@ -299,11 +392,43 @@ body:before {
 }
 
 .mainContainer .shop {
-  border: double;
-  border-color: crimson;
-  background-color: #3e4447;
+  /*     border: double;
+    border-color: crimson; */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, orange), color-stop(30%, black));
+  background: linear-gradient(orange 20%, black 30%);
   height: 300px;
   padding: 1.5%;
+}
+
+.mainContainer .shop:hover {
+  -webkit-transition: background-color 10s;
+  transition: background-color 10s;
+  -webkit-animation: rgbanim 1s forwards;
+          animation: rgbanim 1s forwards;
+  /* animation: drop 0.7s ease forwards; */
+}
+
+@keyframes rgbanim {
+  0% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, orange), color-stop(40%, black));
+    background: linear-gradient(orange 20%, black 40%);
+  }
+  10% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, orange), color-stop(40%, black));
+    background: linear-gradient(orange 25%, black 40%);
+  }
+  15% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, orange), color-stop(40%, black));
+    background: linear-gradient(orange 30%, black 40%);
+  }
+  20% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(35%, orange), color-stop(40%, black));
+    background: linear-gradient(orange 35%, black 40%);
+  }
+  30% {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(45%, orange), color-stop(55%, black));
+    background: linear-gradient(orange 45%, black 55%);
+  }
 }
 
 @media (max-width: 770px) {
@@ -406,14 +531,12 @@ body:before {
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
-  border-color: white;
-  border-style: double;
 }
 
 .mainContainer .cuerpo ul.slider li img:hover {
   border-color: gold;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  opacity: 0.8;
+  /*          transform: scale(0.8);  */
 }
 
 .mainContainer .cuerpo ul.menu {
@@ -454,6 +577,8 @@ body:before {
 .mainContainer .cuerpo ul.menu li a img {
   height: 50%;
   width: 50%;
+  border: double;
+  border-color: transparent;
 }
 
 .mainContainer .cuerpo ul.menu li a :hover {

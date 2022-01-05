@@ -1,20 +1,25 @@
 @import "./responsive";
 @import "./botonera";
+@import "./secondP";
 
-body{
-    background: url('../background.png') no-repeat center/cover ;
+.article1{
+/*     background: url('../background.jpg'); */
+    height: 100%;
+    width: 100%;
+    /* no-repeat center/cover */ ;
     color:white;
-    &:before{
+   &:before{ 
         content: '';
-        background: url('../background.png') no-repeat center
-        center/cover;
+     background: url('../background.jpg')  no-repeat center
+        center/cover; 
         position: absolute;
         top: 0;
         left:0;
         width: 100%;
         height: 100%;
         z-index: -1;
-    }
+   }
+
     
 }
 
@@ -38,9 +43,24 @@ body{
   align-items: center;
 
   .ratings {
-     border: double;
-  border-color: crimson; 
-  background-color: rgb(62, 68, 71);
+    &:hover{
+         
+      transition: background-color 10s;
+      animation: rgbanim 1s forwards;
+      @keyframes rgbanim {
+        0% {  background: linear-gradient(orange 20%, black 40%);}
+        10% { background: linear-gradient(orange 25%, black 40%)}
+        15% { background: linear-gradient(orange 30%, black 40%)}
+        20% { background: linear-gradient(orange 35%, black 40%)}
+        30% { background: linear-gradient(orange 45%, black 55%)}
+
+      }
+       
+
+    }
+   
+  box-shadow: rgb(180, 115, 128);
+  background: linear-gradient(orange 20%, black 40%);
     height: 300px;
     padding: 1.5%;
     text-align: center;
@@ -72,9 +92,25 @@ body{
     }
   }
   .shop {
-    border: double;
-    border-color: crimson;
-    background-color: rgb(62, 68, 71);;
+/*     border: double;
+    border-color: crimson; */
+    &:hover{
+         
+  transition: background-color 10s;
+      animation: rgbanim 1s forwards;
+      @keyframes rgbanim {
+        0% {  background: linear-gradient(orange 20%, black 40%);}
+        10% { background: linear-gradient(orange 25%, black 40%)}
+        15% { background: linear-gradient(orange 30%, black 40%)}
+        20% { background: linear-gradient(orange 35%, black 40%)}
+        30% { background: linear-gradient(orange 45%, black 55%)}
+
+      }
+      /* animation: drop 0.7s ease forwards; */
+ 
+   
+    }
+    background: linear-gradient(orange 20%, black 30%);
     height: 300px;
     padding: 1.5%;
 
@@ -157,11 +193,13 @@ body{
             width: 100%;
             height: 300px;
             object-fit: cover;
-            border-color: white;
-            border-style: double;
+            
+            
+            
             &:hover {
               border-color: gold;
-              transform: scale(1.2);
+              opacity: 0.8;
+      /*          transform: scale(0.8);  */
             }
           }
         }
@@ -193,10 +231,12 @@ body{
             img{
               height: 50%;
               width: 50%;
+              border: double; 
+              border-color: transparent;
             }
             :hover {
-              transform: scale(1.1);
-              border: double;
+               transform: scale(1.1); 
+              border: double; 
               border-radius: 50%;
               border-color: gold;
               
@@ -222,6 +262,8 @@ body{
         height: 2%;
 
     }
+
+
     .priceEur {
       margin-left: 5%;
     }
