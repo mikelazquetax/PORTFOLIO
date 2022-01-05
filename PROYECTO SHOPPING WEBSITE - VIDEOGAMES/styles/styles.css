@@ -128,7 +128,6 @@
   -webkit-animation: drop 0.7s ease forwards;
           animation: drop 0.7s ease forwards;
   border: 4px solid white;
-  z-index: 10;
   background-color: whitesmoke;
   width: 700px;
   max-width: 80%;
@@ -210,6 +209,30 @@
   border-radius: 50%;
   -webkit-transform: rotate(calc(1deg * (-45 + var(--percentage) * 1.8)));
           transform: rotate(calc(1deg * (-45 + var(--percentage) * 1.8)));
+  -webkit-animation: mypie 3s ease-in;
+          animation: mypie 3s ease-in;
+}
+
+@-webkit-keyframes mypie {
+  0% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  50% {
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+}
+
+@keyframes mypie {
+  0% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  50% {
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
 }
 
 .modalRating:hover {

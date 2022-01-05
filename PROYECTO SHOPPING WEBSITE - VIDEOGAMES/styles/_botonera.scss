@@ -94,7 +94,7 @@
   transition: all 200ms ease-in-out;
   animation: drop 0.7s ease forwards;
   border: 4px solid white;
-  z-index: 10;
+
   background-color: whitesmoke;
   width: 700px;
   max-width: 80%;
@@ -133,6 +133,7 @@
     justify-content: center;
     box-sizing: border-box;
     overflow: hidden;
+    
 
     --percentage: 0;
     --fill: #00f;
@@ -149,7 +150,13 @@
       border-color: #000 #000 var(--fill) var(--fill);
       border-radius: 50%;
       transform: rotate(calc(1deg * (-45 + var(--percentage) * 1.8)));
+      animation: mypie 3s ease-in;
     }
+  }
+
+  @keyframes mypie{
+    0%{transform: rotate(-45deg)}
+    50%{transform: rotate(135deg)}
   }
   &:hover{
     

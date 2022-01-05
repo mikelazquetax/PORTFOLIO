@@ -11,6 +11,10 @@
     margin: 0;
     display: flex;
   }
+
+  .hidden{
+    display: none;
+  }
   
   .header {
     text-align: justify;
@@ -66,22 +70,22 @@
   }
   
   .gameDetails{
-      width: 40%;
-      margin-top: 16.5%;
-      
-  
-     
+      width: 60%;
+      margin-top: 23%;
+
   }
   .components{
   
-    /* commit to master */
+      position: fixed;
       border-bottom: inset;
       background-color: lightgray;
+      width: 40%;
   }
-  
+ 
   .components ul li{
       display: inline-flex;
-  
+      border-bottom: groove;
+      border-color: transparent;
       padding-inline: 3%;
       
   }
@@ -95,9 +99,48 @@
   
   .contenido{
       margin-left: 5%;
+      margin-top: 7%;
       
   }
   
   .contenido p{
-      padding: 2%;
+      padding: 1%;
   }
+
+  .contpluspie{
+    display: flex;
+    flex-direction: row;
+  }
+
+.semi-donut{
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  padding-left: 5%;
+  width: 100px;
+  height: 100px;
+  margin-top: 15.4%;
+  margin-left: 5%;
+  position: relative;
+  color: fff;
+  font-size: 20px;
+  display: flex;
+  align-items:flex-end;
+  justify-content: center;
+  box-sizing: border-box;
+  --percentage: 0;
+  --fill: green
+}
+
+.semi-donut:after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 150px;
+  height: 150px;
+  border: 10px solid;
+  border-color: transparent var(--fill) var(--fill) var(--fill);
+  border-radius: 50%;
+  transform: rotate( calc(1deg * (-45 + var(--percentage) * 1.9)))
+}
