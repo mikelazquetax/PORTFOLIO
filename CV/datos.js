@@ -46,6 +46,9 @@ openModal = (TextoCabecer) => {
 
   headerModal.appendChild(buttonClose);
 
+  var container = document.getElementById('container')
+  container.classList.add('active')
+
   if(TextoCabecer == 'Datos Personales'){
       Nom = document.createElement('p')
       Nom.innerText = 'Nombre Completo: Mikel Azqueta Alzuaz'
@@ -130,5 +133,8 @@ openModal = (TextoCabecer) => {
 
   buttonClose.addEventListener("click", () => {
     modal.remove();
+    container.classList.remove('active')
   });
 };
+
+
