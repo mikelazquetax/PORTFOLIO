@@ -13,8 +13,12 @@
     padding: 1%;
     margin-left: 1%;
     border-color: crimson;
+    cursor: pointer;
     border-width: medium;
     font-weight: bold;
+    &:hover{
+      background-color: orange;
+    }
     @include ipad {
       font-size: 20px;
     }
@@ -29,6 +33,7 @@
     padding: 1%;
     border-color: crimson;
     background-color: white;
+    cursor: pointer;
     font-weight: bold;
     @include ipad {
       font-size: 20px;
@@ -65,6 +70,7 @@
     padding: 2%;
     margin: 0;
     text-align: center;
+    cursor:pointer;
     &:hover {
       background-color: orange;
       color: black;
@@ -167,5 +173,6 @@
   .closeB {
     border-radius: 50%;
     font-weight: bold;
+    cursor: pointer;
   }
 }

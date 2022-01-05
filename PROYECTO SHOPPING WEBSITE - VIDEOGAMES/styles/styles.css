@@ -21,8 +21,13 @@
   padding: 1%;
   margin-left: 1%;
   border-color: crimson;
+  cursor: pointer;
   border-width: medium;
   font-weight: bold;
+}
+
+.botonera .selector:hover {
+  background-color: orange;
 }
 
 @media (max-width: 770px) {
@@ -43,6 +48,7 @@
   padding: 1%;
   border-color: crimson;
   background-color: white;
+  cursor: pointer;
   font-weight: bold;
 }
 
@@ -87,6 +93,7 @@
   padding: 2%;
   margin: 0;
   text-align: center;
+  cursor: pointer;
 }
 
 .modal p:hover {
@@ -233,6 +240,7 @@
 .modal-header .closeB {
   border-radius: 50%;
   font-weight: bold;
+  cursor: pointer;
 }
 
 body {
@@ -243,7 +251,7 @@ body {
 }
 
 body:before {
-  content: '';
+  content: "";
   background: url("../background.jpg") no-repeat center center/cover;
   position: absolute;
   top: 0;
@@ -359,7 +367,7 @@ body:before {
 
 .mainContainer .ratings button {
   color: White;
-  background-color: black;
+  background-color: blue;
   padding: 3%;
   border-color: blue;
 }
@@ -367,6 +375,7 @@ body:before {
 .mainContainer .ratings button:hover {
   color: gold;
   border-color: red;
+  cursor: pointer;
 }
 
 @media (max-width: 770px) {
@@ -391,6 +400,12 @@ body:before {
 }
 
 .mainContainer .shop {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   /*     border: double;
     border-color: crimson; */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, orange), color-stop(30%, black));
@@ -428,6 +443,10 @@ body:before {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(45%, orange), color-stop(55%, black));
     background: linear-gradient(orange 45%, black 55%);
   }
+}
+
+.mainContainer .shop .btnUnit button {
+  cursor: pointer;
 }
 
 @media (max-width: 770px) {
@@ -618,7 +637,7 @@ body:before {
 }
 
 .mainContainer .btnUnit button {
-  background-color: black;
+  background-color: blue;
   color: white;
   border-radius: 50%;
   border-color: blue;
@@ -700,7 +719,7 @@ body:before {
 .mainContainer .btonPrices button {
   font-size: 15px;
   color: White;
-  background-color: black;
+  background-color: blue;
   padding: 3%;
   border-color: blue;
 }
@@ -708,6 +727,7 @@ body:before {
 .mainContainer .btonPrices button:hover {
   color: gold;
   border-color: red;
+  cursor: pointer;
 }
 
 @media (max-width: 770px) {
@@ -736,7 +756,7 @@ body:before {
   .mainContainer .btonPrices button {
     font-size: 15px;
     color: White;
-    background-color: black;
+    background-color: blue;
     padding: 3%;
     border-color: blue;
   }

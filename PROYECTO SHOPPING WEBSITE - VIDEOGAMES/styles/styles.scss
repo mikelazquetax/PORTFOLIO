@@ -1,40 +1,32 @@
 @import "./responsive";
 @import "./botonera";
 
-
-body{
-     background: url('../background.jpg') no-repeat center/cover;
+body {
+  background: url("../background.jpg") no-repeat center/cover;
   /*   height: 100%;
     width: 100%; */
-     
-    color:white;
-   &:before{ 
-        content: '';
-     background: url('../background.jpg')  no-repeat center
-        center/cover; 
-        position: absolute;
-        top: 0;
-        left:0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-   }
 
-    
+  color: white;
+  &:before {
+    content: "";
+    background: url("../background.jpg") no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
 }
-
-
-
-
 
 .mainContainer {
   display: flex;
   flex-direction: row;
-  @include mobile{
+  @include mobile {
     display: flex;
-      flex-direction: column;
+    flex-direction: column;
   }
-  @include ipad{
+  @include ipad {
     display: flex;
     flex-direction: column;
   }
@@ -43,48 +35,54 @@ body{
   align-items: center;
 
   .ratings {
-    &:hover{
-         
+    &:hover {
       transition: background-color 10s;
       animation: rgbanim 1s forwards;
       @keyframes rgbanim {
-        0% {  background: linear-gradient(orange 20%, black 40%);}
-        10% { background: linear-gradient(orange 25%, black 40%)}
-        15% { background: linear-gradient(orange 30%, black 40%)}
-        20% { background: linear-gradient(orange 35%, black 40%)}
-        30% { background: linear-gradient(orange 45%, black 55%)}
-
+        0% {
+          background: linear-gradient(orange 20%, black 40%);
+        }
+        10% {
+          background: linear-gradient(orange 25%, black 40%);
+        }
+        15% {
+          background: linear-gradient(orange 30%, black 40%);
+        }
+        20% {
+          background: linear-gradient(orange 35%, black 40%);
+        }
+        30% {
+          background: linear-gradient(orange 45%, black 55%);
+        }
       }
-       
-
     }
-   
-  box-shadow: rgb(180, 115, 128);
-  background: linear-gradient(orange 20%, black 40%);
+
+    box-shadow: rgb(180, 115, 128);
+    background: linear-gradient(orange 20%, black 40%);
     height: 300px;
     padding: 1.5%;
     text-align: center;
-    button{
-      color:White;
-      background-color: black;
+    button {
+      color: White;
+      background-color: blue;
       padding: 3%;
       border-color: blue;
-      &:hover{
-        color:gold;
-        border-color:red
+      &:hover {
+        color: gold;
+        border-color: red;
+        cursor: pointer;
       }
     }
 
-    @include ipad{
-        width: 500px;
-        height: 250px;
-        font-size: 25px;
+    @include ipad {
+      width: 500px;
+      height: 250px;
+      font-size: 25px;
     }
-    @include mobile{
-        width: 300px;
-        height: 250px;
-        font-size: 20px;
-
+    @include mobile {
+      width: 300px;
+      height: 250px;
+      font-size: 20px;
     }
     h2 {
       border: double;
@@ -92,58 +90,66 @@ body{
     }
   }
   .shop {
-/*     border: double;
+    justify-content: center;
+    align-items: center;
+    /*     border: double;
     border-color: crimson; */
-    &:hover{
-         
-  transition: background-color 10s;
+    &:hover {
+      transition: background-color 10s;
       animation: rgbanim 1s forwards;
       @keyframes rgbanim {
-        0% {  background: linear-gradient(orange 20%, black 40%);}
-        10% { background: linear-gradient(orange 25%, black 40%)}
-        15% { background: linear-gradient(orange 30%, black 40%)}
-        20% { background: linear-gradient(orange 35%, black 40%)}
-        30% { background: linear-gradient(orange 45%, black 55%)}
-
+        0% {
+          background: linear-gradient(orange 20%, black 40%);
+        }
+        10% {
+          background: linear-gradient(orange 25%, black 40%);
+        }
+        15% {
+          background: linear-gradient(orange 30%, black 40%);
+        }
+        20% {
+          background: linear-gradient(orange 35%, black 40%);
+        }
+        30% {
+          background: linear-gradient(orange 45%, black 55%);
+        }
       }
       /* animation: drop 0.7s ease forwards; */
- 
-   
     }
     background: linear-gradient(orange 20%, black 30%);
     height: 300px;
     padding: 1.5%;
-
-    @include ipad{
-        width: 500px;
-        height: 300px;
-       
-        .price{
-            justify-content: center;
-        }
-        .btnUnit{
-            margin-left: 40%;
-        }
- 
+    .btnUnit {
+      button {
+        cursor: pointer;
+      }
     }
-  
-    @include mobile{
-        margin-top: 2%;
-        width: 300px;
-        height: 300px;
-        .price{
-            justify-content: center;
-        }
-        .btnUnit{
-            margin-left: 40%;
-        }
-  
+    @include ipad {
+      width: 500px;
+      height: 300px;
+
+      .price {
+        justify-content: center;
+      }
+      .btnUnit {
+        margin-left: 40%;
+      }
+    }
+
+    @include mobile {
+      margin-top: 2%;
+      width: 300px;
+      height: 300px;
+      .price {
+        justify-content: center;
+      }
+      .btnUnit {
+        margin-left: 40%;
+      }
     }
     h2 {
       border: double;
       font-size: 20px;
-
-      
     }
   }
 
@@ -152,22 +158,21 @@ body{
     text-align: center;
     padding-left: 10%;
     padding-right: 10%;
-    @include ipad{
-        margin-top: 3%;
+    @include ipad {
+      margin-top: 3%;
     }
 
     ul {
       margin: 0;
       padding: 0;
       list-style: none;
-      
 
       &.slider {
         position: relative;
-        @include mobile{
-            margin-top: 3%;
-            width: 300px;
-            height: 100px;
+        @include mobile {
+          margin-top: 3%;
+          width: 300px;
+          height: 100px;
         }
         width: 500px;
         height: 300px;
@@ -186,83 +191,75 @@ body{
           &:target {
             opacity: 1;
           }
-          &:hover{
+          &:hover {
             border-color: gold;
           }
           img {
             width: 100%;
             height: 300px;
             object-fit: cover;
-            
-            
-            
+
             &:hover {
               border-color: gold;
               opacity: 0.8;
-      /*          transform: scale(0.8);  */
+              /*          transform: scale(0.8);  */
             }
           }
         }
       }
 
-
       &.menu {
         text-align: center;
         margin: 20px;
-        @include mobile{
-            margin-top: 70%;
+        @include mobile {
+          margin-top: 70%;
         }
         li {
           display: inline-block;
           text-align: center;
-    
+
           a {
             color: white;
             text-decoration: none;
             background-color: transparent;
             padding: 10px;
-            
+
             height: 1%;
             font-size: 20px;
             border-radius: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
-            img{
+            img {
               height: 50%;
               width: 50%;
-              border: double; 
+              border: double;
               border-color: transparent;
             }
             :hover {
-               transform: scale(1.1); 
-              border: double; 
+              transform: scale(1.1);
+              border: double;
               border-radius: 50%;
               border-color: gold;
-              
             }
           }
         }
       }
 
-   li {
+      li {
         margin: 0;
         padding: 0;
         list-style: none;
-      } 
+      }
     }
   }
 
-
-
   .price {
     display: flex;
-    @include ipad{
-        font-size: 30px;
-        height: 2%;
-
+    @include ipad {
+      font-size: 30px;
+      height: 2%;
     }
-
 
     .priceEur {
       margin-left: 5%;
@@ -271,38 +268,38 @@ body{
 
   .btnUnit {
     display: inline-flex;
-    button{
-      background-color: black;
+    button {
+      background-color: blue;
       color: white;
       border-radius: 50%;
       border-color: blue;
       margin: 5%;
-      &:hover{
+      &:hover {
         border-color: gold;
       }
     }
-  
-    @include ipad{
-        height: 9%;
-        font-size: 20px;
+
+    @include ipad {
+      height: 9%;
+      font-size: 20px;
     }
-    @include mobile{
-        height: 9%;
-        font-size: 20px;
-        margin-top: 30%;
+    @include mobile {
+      height: 9%;
+      font-size: 20px;
+      margin-top: 30%;
     }
   }
 
   .units {
     display: inline-flex;
     margin-left: 2%;
-    @include ipad{
-        font-size: 40px;
-        height: 2%;
+    @include ipad {
+      font-size: 40px;
+      height: 2%;
     }
-    @include mobile{
-        font-size: 20px;
-        height: 2%;
+    @include mobile {
+      font-size: 20px;
+      height: 2%;
     }
     h5 {
       margin-left: 6%;
@@ -311,53 +308,52 @@ body{
 
   .finalPrice {
     display: flex;
-    @include ipad{
-
-        justify-content: center;
-        font-size: 30px;
+    @include ipad {
+      justify-content: center;
+      font-size: 30px;
     }
-    @include mobile{
-        justify-content: center;
-        font-size: 20px;
+    @include mobile {
+      justify-content: center;
+      font-size: 20px;
     }
     h5 {
       margin-left: 5%;
     }
   }
-  .btonPrices{
-    button{
+  .btonPrices {
+    button {
       font-size: 15px;
-      color:White;
-      background-color: black;
+      color: White;
+      background-color: blue;
       padding: 3%;
       border-color: blue;
-      &:hover{
-        color:gold;
-        border-color:red
-      }}
-      @include ipad{
-          display: flex;
-          justify-content: center;
-          button{
-            font-size: 20px;
-          }
-          
+      &:hover {
+        color: gold;
+        border-color: red;
+        cursor: pointer;
       }
-      @include mobile{
-        display: flex;
-        justify-content: center;
-        button{
-            font-size: 15px;
-            color:White;
-            background-color: black;
-            padding: 3%;
-            border-color: blue;
-            &:hover{
-              color:gold;
-              border-color:red
-            }
-
-          }
+    }
+    @include ipad {
+      display: flex;
+      justify-content: center;
+      button {
+        font-size: 20px;
+      }
+    }
+    @include mobile {
+      display: flex;
+      justify-content: center;
+      button {
+        font-size: 15px;
+        color: White;
+        background-color: blue;
+        padding: 3%;
+        border-color: blue;
+        &:hover {
+          color: gold;
+          border-color: red;
+        }
+      }
     }
   }
 }
