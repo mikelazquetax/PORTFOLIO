@@ -1,12 +1,12 @@
 @import "./responsive";
 @import "./botonera";
-@import "./secondP";
 
-.article1{
-/*     background: url('../background.jpg'); */
-    height: 100%;
-    width: 100%;
-    /* no-repeat center/cover */ ;
+
+body{
+     background: url('../background.jpg') no-repeat center/cover;
+  /*   height: 100%;
+    width: 100%; */
+     
     color:white;
    &:before{ 
         content: '';

@@ -235,15 +235,14 @@
   font-weight: bold;
 }
 
-.article1 {
-  /*     background: url('../background.jpg'); */
-  height: 100%;
-  width: 100%;
-  /* no-repeat center/cover */
+body {
+  background: url("../background.jpg") no-repeat center/cover;
+  /*   height: 100%;
+    width: 100%; */
   color: white;
 }
 
-.article1:before {
+body:before {
   content: '';
   background: url("../background.jpg") no-repeat center center/cover;
   position: absolute;
