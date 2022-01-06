@@ -48,8 +48,12 @@
       flex-direction: column;
       margin-left: 15%;
       z-index: 1;
+      height: 50%;
   }
   
+  .cover img{
+    margin-top: 45%;
+  }
   
   
   .cover button{
@@ -223,4 +227,30 @@ link{
 
 .link span{
   background-color: grey;
+}
+.bloques{
+  display: flex;
+  flex-direction: column;
+}
+.block1{
+ /*  margin-top: 20%; */
+  margin-left: 45%;
+  display: flex;
+  flex-direction: row;
+}
+.block2{
+  margin-top: 10%;
+  margin-left: 10%;
+}
+.games{
+  display: flex;
+  flex-direction: row;
+
+}
+.game{
+  margin: 2%;
+  width: 100px;
+  height: 50px;
+  background-color: red;
+  padding: 1%;
 }
