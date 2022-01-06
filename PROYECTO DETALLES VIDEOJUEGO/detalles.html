@@ -7,11 +7,9 @@
     <link rel="stylesheet" href="./detalles.css" />
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
-    <script src="plugins/jquery.appear.min.js"></script>
-    <script src="jquery.easypiechart.min.js"></script>
+    <script src="./detalles.js"></script>
     <title>Game Analysis</title>
   </head>
   <body>
@@ -31,18 +29,18 @@
         <div class="components">
           <ul>
             <li>
-              <div>About</div>
+              <div id='aboutButton'>About</div>
             </li>
             <li>
-              <div>Add To</div>
+              <div id='addButton'>Add To</div>
             </li>
             <li>
-              <div>Share</div>
+              <div id="shareButton">Share</div>
             </li>
           </ul>
         </div>
 
-        <div class="contenido">
+        <div class="contenido" id='about'>
           <p><b>Genres:</b>Adventure, Shooter, Action</p>
           <p><b>Platforms:</b>PlayStation4 ,PlayStation5, PC, X-box One</p>
           <p><b>Versions:</b> See 3 more versions of this game</p>
@@ -53,9 +51,37 @@
             chaos to the next. You got this. Probably.
           </p>
         </div>
+        <div class="addTo hidden" id='addTo'>
+          <p>No List Available, why not <span>create one?</span></p>
+          <button>Create new list</button>
+        </div>
+        <div class="buttons hidden"  id='share'>
+          <button class="facebook">
+            <span><i class="fab fa-facebook-f"></i></span>
+            Facebook
+          </button>
+          <button class="instagram">
+            <span><i class="fab fa-instagram"></i></span>
+            Instagram
+          </button>
+          <button class="twitter">
+            <span><i class="fab fa-twitter"></i></span>
+            Twitter
+          </button>
+          <div class="link">
+            <span><i class="fa fa-link"></i> <input
+              type="text"
+              class="form-control"
+              value="https://www.igdb.com/g/39h5"
+              data-clipboard-text="https://www.igdb.com/g/39h5"
+            /></span>
+           
+          </div>
+        </div>
       </div>
-      <div class="semi-donut" style=" --percentage: 0; --fill:rgb(2, 255, 2) ;">75 % Rating</div>
+      <div class="semi-donut" style="--percentage: 0; --fill: rgb(2, 255, 2)">
+        75 % Rating
+      </div>
     </div>
-  
   </body>
 </html>

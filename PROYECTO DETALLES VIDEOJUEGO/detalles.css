@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -71,7 +72,8 @@
   
   .gameDetails{
       width: 60%;
-      margin-top: 23%;
+      margin-top: 16.3%;
+      position: fixed;
 
   }
   .components{
@@ -98,9 +100,11 @@
   }
   
   .contenido{
-      margin-left: 5%;
-      margin-top: 7%;
-      
+/*       margin-left: 5%;
+      margin-top: 7%; */
+      width: 68%;
+  margin-left: 2%;
+
   }
   
   .contenido p{
@@ -116,17 +120,17 @@
   color: black;
   font-weight: bold;
   text-align: center;
-  padding-left: 5%;
+  padding-left: 3%;
   width: 100px;
   height: 100px;
-  margin-top: 15.4%;
-  margin-left: 5%;
-  position: relative;
+  margin-top: 10.7%;
+  margin-left: 45%;
+  position: fixed;
   color: fff;
   font-size: 20px;
   display: flex;
   align-items:flex-end;
-  justify-content: center;
+/*   justify-content: center; */
   box-sizing: border-box;
   --percentage: 0;
   --fill: green
@@ -150,4 +154,73 @@
   0%{transform: translateX( 0%)}
  
   50%{transform: translateX(100%)}
+}
+
+.addTo{
+  margin-top: 4.2%;
+  margin-left: 2%;
+}
+
+.addTo button{
+  margin-top: 1%;
+  color: #fff;
+  background-color: #9147ff;
+  border-color: #9147ff;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 1%;
+}
+.buttons{
+  margin-top: 4.2%;
+  margin-left: 2%;
+
+}
+.facebook{
+  color: white;
+  background-color: blue;
+  font-weight: bold;
+  padding: 1%;
+  border-radius: 10%;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 1%;
+  cursor: pointer;
+}
+
+.facebook span{
+ color: black;
+}
+
+
+.instagram{
+  cursor: pointer;
+    color: white;
+    background-color: #e1306c;
+    font-weight: bold;
+    padding: 1%;
+    border-radius: 10%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.twitter{
+  cursor: pointer;
+  color: white;
+  background-color: #46C1F6;
+  font-weight: bold;
+  padding: 1%;
+  border-radius: 10%;
+  font-family: 'Poppins', sans-serif;
+}
+
+link{
+  padding-top: 1%;
+  display: inline-flex;
+  padding-inline: 0;
+}
+
+
+.link span{
+  background-color: grey;
 }
