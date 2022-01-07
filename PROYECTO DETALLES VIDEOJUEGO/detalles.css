@@ -8,7 +8,7 @@
   
   body {
     font-family: "Open Sans", Helvetica, Arial, sans-serif;
-    overflow-x: hidden;
+     overflow-x: hidden; 
     margin: 0;
     display: flex;
   }
@@ -228,6 +228,8 @@ link{
 .link span{
   background-color: grey;
 }
+
+
 .bloques{
   display: flex;
   flex-direction: column;
@@ -236,22 +238,119 @@ link{
 .block1{
  /*  margin-top: 20%; */
   /* margin-left: 45%; */
+  margin-top: 15%;
   display: flex;
   flex-direction: row;
 }
-.block2{
-  margin-top: 10%;
-   margin-left: 5%;  
-}
-.games{
-  display: flex;
-  flex-direction: row;
 
+.recomendaciones{
+  margin-bottom: 70px;
 }
-.game{
-  margin: 2%;
-  width: 200px;
-  height: 50px;
+
+.contenedor-titulo-controles{
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.contenedor-titulo-controles h3{
+  color: blueviolet;
+  font-size: 30px;
+}
+
+.contenedor-titulo-controles .indicadores button{
+  background-color: blueviolet;
+  height: 3px;
+  width: 10px;
+  cursor: pointer;
+  border: none;
+  margin-right: 2px;
+}
+
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.activo{
   background-color: red;
-  padding: 1%;
+}
+
+.recomendaciones .contenedor-principal{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.recomendaciones .contenedor-principal .flecha-izquierda,
+.recomendaciones .contenedor-principal .flecha-derecha{
+  position: absolute;
+  border: none;
+  background: rgba(0, 0, 0, 0.3);
+  font-size: 40px;
+  height: 50%;
+  top: calc(50% - 25%);
+  line-height: 40px;
+  width: 50px;
+  color: black;
+  z-index: 500;
+  transition: 0.2s ease all;
+}
+
+.recomendaciones .contenedor-principal .flecha-izquierda:hover{
+ background: blueviolet;
+}
+.recomendaciones .contenedor-principal .flecha-derecha:hover{
+  background: blueviolet;
+}
+
+.recomendaciones .contenedor-principal .flecha-izquierda{
+  left:0
+}
+
+.recomendaciones .contenedor-principal .flecha-derecha{
+  right: 0
+}
+
+.recomendaciones .contenedor-carousel{
+  width: 100%;
+  padding: 20px 0;
+ overflow: hidden; 
+  scroll-behavior: smooth;
+ 
+}
+
+.recomendaciones .contenedor-carousel .carousel{
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.recomendaciones .contenedor-carousel .carousel .videojuegos{
+min-width: 10%;
+transition: .3s ease all;
+box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.recomendaciones .contenedor-carousel .carousel .videojuegos.hover{
+  transform: scale(1.2);
+  transform-origin: center;
+}
+.recomendaciones .contenedor-carousel .carousel .videojuegos img{
+  width: 85%;
+  vertical-align: top;
+}
+
+
+
+
+/* Media Query */
+
+@media screen  and (max-width: 800px){
+  .recomendaciones .contenedor-carousel{
+    overflow: visible;
+  }
+  .recomendaciones .contenedor-carousel .carousel{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px
+  }
+  .indicadores,
+  .recomendaciones .flecha-izquierda,
+  .recomendaciones .flecha-derecha{
+    display: none
+  }
 }
